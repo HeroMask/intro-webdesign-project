@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet" href="style.css">
+<header>
+    <title>Center for Applied Research in Information Technology (CARIT)</title>
+    <a href="https://ccse.kennesaw.edu/it/">
+        <img class="logo" src="./img/School Logo.jpg">
+    </a>
+</header>
+<body>
+    <div class="banner">Center for Applied Research in Information Technology</div>
+    <div class="navbar">
+        <a class="pagelink" href="index.html">Front Page</a>
+        <a class="pagelink" href="faculty.html">About Us</a>
+        <a class="pagelink" href="projects.html">Projects</a>
+    </div>
+    <br>
+    <div class="pagecontent">
+        <h2>Faculty and Staff</h2>
+        <br>
+        <div id="facultyinsert"></div>
+    </div>
+</body>
+<script src="script.js">
+    function facultyStartup(value) {
+        if (!value) {
+            return;
+        }
+        var text;
+        var card = document.createElement("div");
+        for (i = 0; i < value.length; i++) {
+            text = "<summary>" + value[i]["name"] + "</summary>"
+            text += "<img src='" + value[i]["img url"] + "' class='photo'>";
+            text += "<p>Name: " + value[i]["name"] + "</p>";
+            text += "<p>Phone: " + value[i]["phone"] + "</p>";
+            text += "<p>Email: " + value[i]["email"] + "<p>";
+            text += "<p>Web Page: " + value[i]["webpage link"] + "<p>";
+            text += "<br>";
+            text += "<p>Position: " + value[i]["position"] + "<p>";
+            text += "<p>Research Interests:" + value[i]["research interests"] + "<p>";
+            text += "<br>"
+            card.innerHTML = text;
+            document.getElementById("facultyinsert").appendChild(card);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", facultyStartup(faculty_list));
+</script>
+<footer>
+    <p>This is a KSU web design class project page, the class azure page can be found <a href="http://it5443.azurewebsites.net">here</a>.</p>
+</footer>
