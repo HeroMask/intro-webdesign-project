@@ -19,34 +19,43 @@
     <div class="pagecontent">
         <h2>Faculty and Staff</h2>
         <br>
-        <div id="facultyinsert"></div>
+        <div class="profile">
+            <a href="https://facultyweb.kennesaw.edu/lli13/index.php">
+                <img class="photo" src="./img/Lei Li.jpg">
+            </a>
+            <p>Name: Lei Li</p>
+            <p>Phone: (470) 578-3915</p>
+            <p><a href="mailto:lli13@kennesaw.edu">E-mail</a></p>
+            <br>
+            <p>Position: Interim Chair of IT, Professor, & MSIT Coordinator</p>
+            <p>Research Interests: Social Media Data Analytics, Information Security, Web Information Management, IT Education</p>
+        </div>
+        <br>
+        <div class="profile" style="padding-top: 1%; padding-bottom: 5%">
+            <a href="https://facultyweb.kennesaw.edu/speltsve/index.php">
+                <img class="photo" src="./img/Svetlana Peltsverger.jpg">
+            </a>
+            <p>Name: Svetlana Peltsverger</p>
+            <p>Phone: (470) 578-3813</p>
+            <p><a href="mailto:speltsve@kennesaw.edu">E-mail</a></p>
+            <br>
+            <p>Position: Associate Dean of the College of Computing and Software Engineering</p>
+            <p>Research Interests: Security, Databases, Distributed Computing and Privacy</p>
+        </div>
+        <br>
+        <div class="profile">
+            <a href="https://facultyweb.kennesaw.edu/hshahria/index.php">
+                <img class="photo" src="./img/Hossain Shahriar-hs.jpg">
+            </a>
+            <p>Name: Hossain Shahriar</p>
+            <p>Phone: (470) 578-3866</p>
+            <p><a href="mailto:hshahria@kennesaw.edu">E-mail</a></p>
+            <br>
+            <p>Position: Associate Professor & BSIT/BASIT Program Coordinator</p>
+            <p>Research Interests: Mobile Application, Blockchain Application, Health Informatics and IT Education</p>
+        </div>
     </div>
 </body>
-<script src="script.js">
-    function facultyStartup(value) {
-        if (!value) {
-            return;
-        }
-        var text;
-        var card = document.createElement("div");
-        for (i = 0; i < value.length; i++) {
-            text = "<summary>" + value[i]["name"] + "</summary>"
-            text += "<img src='" + value[i]["img url"] + "' class='photo'>";
-            text += "<p>Name: " + value[i]["name"] + "</p>";
-            text += "<p>Phone: " + value[i]["phone"] + "</p>";
-            text += "<p>Email: " + value[i]["email"] + "<p>";
-            text += "<p>Web Page: " + value[i]["webpage link"] + "<p>";
-            text += "<br>";
-            text += "<p>Position: " + value[i]["position"] + "<p>";
-            text += "<p>Research Interests:" + value[i]["research interests"] + "<p>";
-            text += "<br>"
-            card.innerHTML = text;
-            document.getElementById("facultyinsert").appendChild(card);
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", facultyStartup(faculty_list));
-</script>
 <footer>
-    <p>This is a KSU web design class project page, the class azure page can be found <a href="http://it5443.azurewebsites.net">here</a>.</p>
+    <p>This is a KSU web design class project page, the class azure page can be found <a href="http://it5443.azurewebsites.net" style="color:gold">here</a>.</p>
 </footer>

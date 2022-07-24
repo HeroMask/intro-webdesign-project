@@ -1,3 +1,9 @@
+a {
+    color: black;
+}
+body {
+    margin-bottom: 5%;
+}
 footer {
     background-color: black;
     color: gold;
@@ -27,6 +33,10 @@ footer {
     color: gold;
     margin-left: 8%;
     margin-right: 8%;
+    text-decoration-line: none;
+}
+.pagelink:hover {
+    text-decoration-line: underline;
 }
 .pagecontent {
     margin-left: 25%;
@@ -36,7 +46,7 @@ footer {
     border-right: 1px solid black;
     padding-left: 1%;
     padding-right: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 15%;
     text-align: center;
 }
 .logo {
@@ -45,5 +55,13 @@ footer {
     height: auto;
 }
 .photo {
-    max-width: 27%;
+    max-width: 24%;
+    float: left;
+    padding-right: 1%;
+}
+.profile {
+    display: block;
+    text-align: justify;
+    padding-bottom: 2%;
+    padding-top: 3%;
 }
